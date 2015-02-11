@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<fx:root id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="337.0" prefWidth="600.0" style="-fx-background-color: rgba(10,10,10,0.65);" type="javafx.scene.layout.AnchorPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+  <children>
+    <ImageView fx:id="videoCanvas" fitHeight="352.5" fitWidth="600.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="false">
+      <image>
+        <Image url="@../MediaIcons/Jellyfish.jpg" />
+      </image>
+    </ImageView>
+    <AnchorPane fx:id="controlPanel" layoutX="2.5" maxWidth="595.0" minHeight="50.0" prefHeight="53.0" prefWidth="595.0" style="-fx-border-radius: 10;&#10;-fx-border-color: transparent;&#10;-fx-background-radius: 10;&#10;-fx-background-color: rgba(0,0,0,0.5);" AnchorPane.bottomAnchor="4.0">
+      <children>
+        <VBox id="VBox" alignment="CENTER" layoutX="3.0" layoutY="4.0" spacing="2.0">
+          <children>
+            <HBox id="HBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <Label fx:id="timeLabel" alignment="CENTER" prefWidth="60.0" text="00:00:00" textFill="WHITE" />
+                <Slider fx:id="timeSlider" prefWidth="524.5" />
+              </children>
+            </HBox>
+            <Group id="Group">
+              <children>
+                <HBox id="HBox" alignment="CENTER" layoutX="0.0" layoutY="0.0" spacing="2.0">
+                  <children>
+                    <Button fx:id="playButton" contentDisplay="GRAPHIC_ONLY" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" text="Button">
+                      <effect>
+                        <InnerShadow height="31.0" radius="15.0" width="31.0" />
+                      </effect>
+                      <graphic>
+                        <ImageView id="media_playback_start.png" fitHeight="25.0" fitWidth="25.0" mouseTransparent="true">
+                          <image>
+                            <Image url="@../MediaIcons/media_playback_start.png" />
+                          </image>
+                        </ImageView>
+                      </graphic>
+                    </Button>
+                    <Button fx:id="backButton" contentDisplay="GRAPHIC_ONLY" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" text="Button">
+                      <effect>
+                        <InnerShadow height="31.0" radius="15.0" width="31.0" />
+                      </effect>
+                      <graphic>
+                        <ImageView id="media_playback_start.png" fitHeight="25.0" fitWidth="25.0" mouseTransparent="true">
+                          <image>
+                            <Image url="@../MediaIcons/media_skip_backward.png" />
+                          </image>
+                        </ImageView>
+                      </graphic>
+                    </Button>
+                    <Button fx:id="nextButton" contentDisplay="GRAPHIC_ONLY" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" text="Button">
+                      <effect>
+                        <InnerShadow height="31.0" radius="15.0" width="31.0" />
+                      </effect>
+                      <graphic>
+                        <ImageView id="media_playback_start.png" fitHeight="25.0" fitWidth="25.0" mouseTransparent="true">
+                          <image>
+                            <Image url="@../MediaIcons/media_skip_forward.png" />
+                          </image>
+                        </ImageView>
+                      </graphic>
+                    </Button>
+                    <Button fx:id="stopButton" contentDisplay="GRAPHIC_ONLY" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" text="Button">
+                      <effect>
+                        <InnerShadow height="31.0" radius="15.0" width="31.0" />
+                      </effect>
+                      <graphic>
+                        <ImageView id="media_playback_start.png" fitHeight="25.0" fitWidth="25.0" mouseTransparent="true">
+                          <image>
+                            <Image url="@../MediaIcons/media_playback_stop.png" />
+                          </image>
+                        </ImageView>
+                      </graphic>
+                    </Button>
+                    <Button fx:id="ejectButton" contentDisplay="GRAPHIC_ONLY" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" text="Button">
+                      <effect>
+                        <InnerShadow height="31.0" radius="15.0" width="31.0" />
+                      </effect>
+                      <graphic>
+                        <ImageView id="media_playback_start.png" fitHeight="25.0" fitWidth="25.0" mouseTransparent="true">
+                          <image>
+                            <Image url="@../MediaIcons/media_eject.png" />
+                          </image>
+                        </ImageView>
+                      </graphic>
+                    </Button>
+                  </children>
+                </HBox>
+                <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="LEFT" layoutX="141.0" layoutY="4.0" prefWidth="230.0" text="Video title will be here" textFill="WHITE" />
+                <HBox id="HBox" alignment="CENTER" layoutX="501.0" layoutY="0.0" spacing="5.0">
+                  <children>
+                    <Button fx:id="playListButton" contentDisplay="GRAPHIC_ONLY" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" text="Button">
+                      <graphic>
+                        <ImageView id="media_playback_start.png" fitHeight="25.0" fitWidth="25.0" mouseTransparent="true">
+                          <image>
+                            <Image url="@../MediaIcons/media_playlist.png" />
+                          </image>
+                        </ImageView>
+                      </graphic>
+                    </Button>
+                    <Button fx:id="libraryButton" contentDisplay="GRAPHIC_ONLY" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" text="Button">
+                      <graphic>
+                        <ImageView id="media_playback_start.png" fitHeight="25.0" fitWidth="25.0" mouseTransparent="true">
+                          <image>
+                            <Image url="@../MediaIcons/screenlets.png" />
+                          </image>
+                        </ImageView>
+                      </graphic>
+                    </Button>
+                  </children>
+                </HBox>
+                <ImageView fx:id="volImage" fitHeight="20.0" fitWidth="25.0" layoutX="375.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../MediaIcons/audio_volume_muted_newschool.png" />
+                  </image>
+                </ImageView>
+                <Slider fx:id="volSlider" layoutX="405.0" layoutY="6.0" max="100.0" prefWidth="95.0" />
+              </children>
+            </Group>
+          </children>
+        </VBox>
+      </children>
+      <effect>
+        <InnerShadow color="#bfbfbf" height="46.33258928571429" offsetX="1.0" radius="22.720052083333336" width="46.54761904761905" />
+      </effect>
+    </AnchorPane>
+    <AnchorPane id="AnchorPane" fx:id="topControls" prefHeight="16.0" prefWidth="590.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+      <children>
+        <Button fx:id="exitButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="15.0" maxWidth="15.0" minHeight="15.0" minWidth="15.0" mnemonicParsing="false" opacity="0.5" prefHeight="15.0" prefWidth="15.0" text="Exit" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+          <graphic>
+            <ImageView id="gnome_session_halt.png" fitHeight="15.0" fitWidth="15.0" mouseTransparent="true">
+              <image>
+                <Image url="@../MediaIcons/gnome_session_halt.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button id="exitButton" fx:id="fullScreenButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="15.0" maxWidth="15.0" minHeight="15.0" minWidth="15.0" mnemonicParsing="false" opacity="0.5" prefHeight="15.0" prefWidth="15.0" text="Exit" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="0.0">
+          <graphic>
+            <ImageView id="gnome_session_halt.png" fitHeight="15.0" fitWidth="15.0" mouseTransparent="true">
+              <image>
+                <Image url="@../MediaIcons/top_right_expand.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+      </children>
+    </AnchorPane>
+    <Pane fx:id="resizePane" prefHeight="353.0" prefWidth="4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+  </children>
+</fx:root>

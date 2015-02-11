@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="vlcjtesting.playerComponents.VideoPlayer">
+  <children>
+    <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <image>
+        <Image url="@../../../../../../../Public/Pictures/Sample%20Pictures/Jellyfish.jpg" />
+      </image>
+    </ImageView>
+    <fx:include fx:id="mediaBar" source="MediaBar.fxml" layoutX="0.0" AnchorPane.bottomAnchor="0.0" />
+    <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Button contentDisplay="GRAPHIC_ONLY" maxHeight="21.0" maxWidth="21.0" minHeight="21.0" minWidth="21.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: transparent;" text="Button">
+          <graphic>
+            <ImageView id="gnome_session_halt.png" fitHeight="20.0" fitWidth="20.0" mouseTransparent="true">
+              <image>
+                <Image url="@MediaIcons/gnome_session_halt.png" preserveRatio="true" smooth="true" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+      </children>
+    </HBox>
+    <fx:include id="" fx:id="playList" source="playlist/PlayList.fxml" layoutX="396.0" layoutY="65.0" visible="false" />
+  </children>
+</AnchorPane>

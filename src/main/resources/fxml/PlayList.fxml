@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" id="AnchorPane" minWidth="200.0" prefHeight="275.0" prefWidth="213.0" style="-fx-background-color: rgba(0,0,0,0.5);" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <ListView fx:id="listView" prefHeight="275.0" prefWidth="200.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <stylesheets>
+        <URL value="@playList.css" />
+      </stylesheets>
+    </ListView>
+  </children>
+</fx:root>

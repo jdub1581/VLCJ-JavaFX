@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" id="AnchorPane" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <HBox id="HBox" alignment="CENTER" layoutX="5.0" layoutY="3.0" prefHeight="45.0" prefWidth="175.0" spacing="5.0">
+      <children>
+        <ImageView id="image" fx:id="view" fitHeight="42.5" fitWidth="68.5" pickOnBounds="true" preserveRatio="false" smooth="true" style="">
+          <effect>
+            <Bloom threshold="0.7888888888888889" />
+          </effect>
+          <image>
+            <Image url="@../../../../../../../Public/Pictures/Sample%20Pictures/Desert.jpg" />
+          </image>
+        </ImageView>
+        <VBox id="VBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <Label fx:id="titleLabel" prefWidth="111.0" text="Tiltle will go here">
+              <textFill>
+                <Color blue="0.875" green="0.875" red="0.875" fx:id="x1" />
+              </textFill>
+              <tooltip>
+                <Tooltip text="Empty Tooltip" fx:id="titleToolTip" />
+              </tooltip>
+            </Label>
+            <Label fx:id="timeLabel" prefWidth="111.0" text="length: 00:00:00" textFill="$x1" />
+          </children>
+        </VBox>
+      </children>
+    </HBox>
+  </children>
+  <padding>
+    <Insets />
+  </padding>
+</fx:root>

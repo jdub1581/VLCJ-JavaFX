@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: rgba(0,0,0,0.65);&#10;-fx-background-radius: 10;&#10;-fxborder-color: transparent;&#10;-fx-border-radius: 10;&#10;&#10;" xmlns:fx="http://javafx.com/fxml" fx:controller="vlcjtesting.playerComponents.MediaBar">
+  <children>
+    <Group id="Group" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="2.0">
+      <children>
+        <Button fx:id="playButton" contentDisplay="GRAPHIC_ONLY" layoutX="0.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" prefWidth="40.0" style="-fx-background-color: transparent" text="Button">
+          <graphic>
+            <ImageView id="media_playback_start.png" fitHeight="35.0" fitWidth="35.0" mouseTransparent="true" preserveRatio="true">
+              <image>
+                <Image url="@MediaIcons/media_playback_start.png" preserveRatio="true" smooth="true" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button fx:id="backButton" contentDisplay="GRAPHIC_ONLY" layoutX="40.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent" text="Button">
+          <graphic>
+            <ImageView id="media_skip_backward.png" fitHeight="35.0" fitWidth="35.0" mouseTransparent="true" preserveRatio="true">
+              <image>
+                <Image url="@MediaIcons/media_skip_backward.png" preserveRatio="true" smooth="true" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button fx:id="fwdButton" contentDisplay="GRAPHIC_ONLY" layoutX="80.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" prefWidth="40.0" style="-fx-background-color: transparent" text="Button">
+          <graphic>
+            <ImageView id="media_skip_forward.png" fitHeight="35.0" fitWidth="35.0" mouseTransparent="true" preserveRatio="true">
+              <image>
+                <Image url="@MediaIcons/media_skip_forward.png" preserveRatio="true" smooth="true" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button fx:id="stopButton" contentDisplay="GRAPHIC_ONLY" layoutX="120.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" prefWidth="40.0" style="-fx-background-color: transparent" text="Button">
+          <graphic>
+            <ImageView id="media_skip_forward.png" fitHeight="35.0" fitWidth="35.0" mouseTransparent="true" preserveRatio="true">
+              <image>
+                <Image url="@MediaIcons/media_playback_stop.png" preserveRatio="true" smooth="true" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Label fx:id="timeLabel" alignment="CENTER" layoutX="6.0" layoutY="0.0" prefWidth="72.0" text="00:00:00" textFill="WHITE" />
+        <Slider fx:id="timeSlider" layoutX="79.0" layoutY="2.0" prefWidth="513.0" />
+        <Label fx:id="titleLabel" layoutX="170.0" layoutY="26.0" prefWidth="162.0" text="Title Here" textFill="WHITE" />
+        <Button fx:id="mediaLibraryButton" contentDisplay="GRAPHIC_ONLY" layoutX="552.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" prefWidth="40.0" style="-fx-background-color: transparent" text="Button">
+          <graphic>
+            <ImageView id="media_skip_forward.png" fitHeight="35.0" fitWidth="35.0" mouseTransparent="true" preserveRatio="true">
+              <image>
+                <Image url="@MediaIcons/screenlets.png" preserveRatio="true" smooth="true" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button fx:id="playListButton" contentDisplay="GRAPHIC_ONLY" layoutX="512.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" prefWidth="40.0" style="-fx-background-color: transparent" text="Button">
+          <graphic>
+            <ImageView id="media_skip_forward.png" fitHeight="35.0" fitWidth="35.0" mouseTransparent="true" preserveRatio="true">
+              <image>
+                <Image url="@MediaIcons/media_playlist.png" preserveRatio="true" smooth="true" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button fx:id="eqButton" contentDisplay="GRAPHIC_ONLY" layoutX="472.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" prefWidth="40.0" style="-fx-background-color: transparent" text="Button">
+          <graphic>
+            <ImageView id="media_skip_forward.png" fitHeight="35.0" fitWidth="35.0" mouseTransparent="true" preserveRatio="true">
+              <image>
+                <Image url="@MediaIcons/media_equalizer.png" preserveRatio="true" smooth="true" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Slider fx:id="volSlider" layoutX="412.0" layoutY="29.0" max="1.0" prefWidth="60.0" />
+        <Button fx:id="ejectButton" contentDisplay="GRAPHIC_ONLY" layoutX="336.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" prefWidth="40.0" style="-fx-background-color: transparent" text="Button">
+          <graphic>
+            <ImageView id="media_skip_forward.png" fitHeight="35.0" fitWidth="35.0" mouseTransparent="true" preserveRatio="true">
+              <image>
+                <Image url="@MediaIcons/media_eject.png" preserveRatio="true" smooth="true" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <ImageView fx:id="volImage" fitHeight="35.0" fitWidth="35.0" layoutX="377.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@MediaIcons/audio_volume_muted_newschool.png" />
+          </image>
+        </ImageView>
+      </children>
+    </Group>
+  </children>
+</AnchorPane>

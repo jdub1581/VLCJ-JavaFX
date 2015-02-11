@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-background-color 0x202020ff?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="650.0" style="-fx-background-color: #202020;" xmlns:fx="http://javafx.com/fxml" fx:controller="vlcjtesting.playerComponents.mediaLibrary.MediaLibrary">
+  <children>
+    <Button fx:id="button" onAction="#handleButtonAction" prefHeight="24.0" text="Add Dir" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="14.0" />
+    <ScrollPane hbarPolicy="NEVER" prefHeight="357.0" prefWidth="649.0" style="-fx-background-color: transparent;" vbarPolicy="AS_NEEDED" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+      <content>
+        <TilePane fx:id="tilePane" hgap="5.0" prefColumns="0" prefHeight="357.0" prefRows="0" prefTileHeight="25.0" prefTileWidth="35.0" prefWidth="635.0" tileAlignment="TOP_LEFT" vgap="5.0" />
+      </content>
+    </ScrollPane>
+  </children>
+</AnchorPane>

@@ -1,0 +1,104 @@
+/* 
+    Document   : playList.css
+    Created on : Feb 6, 2013, 1:15:06 PM
+    Author     : Dub-Laptop
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*******************************************************************************
+ *                                                                             *
+ * ListView and ListCell                                                       *
+ *                                                                             *
+ ******************************************************************************/
+
+.list-view {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ListViewSkin";
+    -fx-background-color: -fx-box-border, -fx-control-inner-background;
+    -fx-background-insets: 0, 1;
+
+     /* There is some oddness if padding is in em values rather than pixels,
+        in particular, the left border of the control doesn't show. */
+    -fx-padding: 1; /* 0.083333em; */
+}
+
+.list-view:focused {
+    -fx-background-color: -fx-focus-color,-fx-box-border,-fx-control-inner-background;
+    -fx-background-insets: -1.4, 0, 1;
+    -fx-background-radius: 1.4, 0, 0;
+
+    /* There is some oddness if padding is in em values rather than pixels,
+       in particular, the left border of the control doesn't show. */
+    -fx-padding: 1; /* 0.083333em; */
+}
+
+.list-view .scroll-bar:vertical{
+    -fx-background-insets: 0, 0 0 0 1;
+    -fx-padding: -0.083333em -0.083333em -0.083333em 0.0em; /* -1 -1 -1 0 */
+}
+
+.list-view .scroll-bar:horizontal{
+    -fx-background-insets: 0, 1 0 0 0;
+    -fx-padding: 0.0em 0.0em -0.083333em -0.083333em; /* 0 0 -1 -1 */
+}
+
+.list-view:disabled {
+    -fx-opacity: -fx-disabled-opacity;
+}
+
+.list-view .corner {
+    -fx-background-color: -fx-box-border, -fx-base;
+    -fx-background-insets: 0, 1 0 0 1;
+}
+
+.list-cell {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ListCellSkin";
+    -fx-background-color: black;
+    -fx-padding: 0.25em; /* 3 */
+    -fx-text-fill: -fx-text-inner-color;
+    -fx-cell-size: 2.0em; /* 24 */
+    -fx-opacity: 1;
+}
+
+.list-cell:focused {
+    -fx-background-color: -fx-focus-color, -fx-control-inner-background;
+    -fx-background-insets: 0, 1.4;
+}
+
+.list-cell:odd {
+    -fx-background-color: black;
+}
+
+.list-cell:focused:odd {
+    -fx-background-color: -fx-focus-color, derive(-fx-control-inner-background,-5%);
+    -fx-background-insets: 0, 1.4;
+}
+
+.list-view:focused .list-cell:filled:selected, .list-view:focused .list-cell:filled:selected:hover {
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-selection-bar;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+/* When the ListView is _not_ focused, we show alternate selection colors */
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: lightgray;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.list-cell:filled:selected:focused:disabled, .list-cell:filled:selected:disabled {
+    -fx-opacity: -fx-disabled-opacity;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: -fx-cell-hover-color;
+    -fx-text-fill: -fx-text-inner-color;
+}
+.list-cell:empty{
+    -fx-background-color: transparent;    
+}
+
+.list-view:horizontal .list-cell:filled:selected, .list-view:horizontal .list-cell:filled:selected:hover {
+    -fx-background-color: linear-gradient(to right, derive(-fx-accent,-7%), derive(-fx-accent,-25%));
+}
+
